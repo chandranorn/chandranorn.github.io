@@ -1,0 +1,678 @@
+/*
+|------------------------------------------
+|  Global
+|------------------------------------------
+*/
+
+body {
+	font-family: 'Public Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 1.1px;
+	color: #000;
+}
+
+.theme-wrapper {
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
+.main {
+	background: #fff;
+	padding-top: 100px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.is-hidden {
+	display: none;
+}
+
+.is-flex {
+	display: flex;
+}
+
+/*
+|------------------------------------------
+|  Links
+|------------------------------------------
+*/
+
+a {
+	text-decoration: none;
+}
+
+/*
+|------------------------------------------
+|  Typography
+|------------------------------------------
+*/
+
+.lrg-heading {
+	font-size: 30px;
+	font-weight: 800;
+	letter-spacing: 1.1px;
+	line-height: 1.1;
+}
+
+.thin-subhead {
+	font-weight: 400;
+}
+
+/*
+|------------------------------------------
+|  Burger
+|------------------------------------------
+*/
+
+.gn-trigger {
+	position: relative;
+	width: 50px;
+	height: 30px;
+	border: none;
+	outline: 0;
+	background: transparent;
+}
+
+.burger {
+	position: absolute;
+	background: rgba(255,255,255,1);
+	width: 40px;
+	height: 4px;
+	right: 0;
+	top: 50%;
+}
+
+.burger:before,
+.burger:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background: rgba(255,255,255,1);
+	width: 40px;
+	height: 4px;
+	right: 0;
+}
+
+.burger:before {
+	top: 13px;
+}
+
+.burger:after {
+	bottom: 13px;
+}
+
+.burger,
+.burger:before,
+.burger:after {
+	transition-property: transform, top, background;
+	transition-duration: .35s;
+}
+
+.gn-trigger.is-active .burger:before {
+	transform: rotate(45deg);
+	top: -2px;
+}
+
+.gn-trigger.is-active .burger:after {
+	transform: rotate(-45deg);
+	top: -2px;
+}
+
+.gn-trigger.is-active .burger {
+	background: rgba(255,255,255,0);
+}
+
+/*
+|------------------------------------------
+|  Header/Navigation
+|------------------------------------------
+*/
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	will-change: top;
+	transition: top .3s ease;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	background: #212121;
+	z-index: 3;
+	padding: 10px 15px;
+}
+
+.header.remove-shadow {
+	box-shadow: none;
+}
+
+.header.header-up {
+	top: -100px;
+}
+
+.header img {
+	width: 119px;
+    margin-top: 16px;
+}
+
+.gn {
+	display: none;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 100%;
+	background: #212121;
+}
+
+.gn ul {
+	font-weight: 600;
+}
+
+.gn li {
+	text-transform: uppercase;
+	font-size: 15px;
+	border-bottom: 2px solid #fff;
+}
+
+.gn li:last-child {
+	border:none;
+	box-shadow: 0px 5px 10px 1px rgba(106,106,106,.49);
+}
+
+.gn a {
+	color: #fff;
+	padding: 15px 40px;
+	display: block;
+}
+
+/*
+|------------------------------------------
+|  Banner
+|------------------------------------------
+*/
+
+.bnr .job-title {
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 13px
+}
+
+.bnr .headshot {
+	width: 50vw;
+	max-width: 510px;
+}
+
+
+.bnr .intro {
+	max-width: 394px;
+	margin: 20px 0 0 20px;
+	position: relative;
+}
+
+.bnr .intro:before {
+	content: "";
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    top: 0px;
+    left: -22px;
+    background: #212121;
+}
+
+/*
+|------------------------------------------
+|  About
+|------------------------------------------
+*/
+
+.me-info span {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1;
+}
+
+.me-info .sml-desc {
+	font-size: 18px;
+}
+
+.me-info .about-intro {
+	margin-top: 50px;
+}
+
+.resume {
+	margin-top: 80px;
+}
+
+.resume .specs p { 
+	font-size: 20px;
+	background-color: #e5cfd2;
+	padding: 5px;
+    border-radius: 5px;
+    margin: 5px 5px 5px 0;
+}
+
+.resume .list {
+	max-width: 484px;
+}
+
+.resume .spec-heading {
+	margin-bottom: 12px;
+}
+
+.main .spec-heading {
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.hobbies img{
+	width: 70%;
+}
+
+/*
+|------------------------------------------
+|  Projects
+|------------------------------------------
+*/
+
+.art-info {
+	margin-top: 20px;
+	max-width: 860px;
+}
+
+.art-info .lrg-heading {
+	margin-bottom: 4px;
+}
+
+.art-info .service {
+	margin-bottom: 17px;
+}
+
+.art {
+	width: 75%;
+	margin: 0 auto 50px;
+}
+
+.projects span {
+	font-weight: 100;
+}
+
+.projects {
+	margin: 60px 0 90px;
+}
+
+.projects img {
+	width: 100%;
+} 
+
+.projects .art.alpine {
+	max-width: 1000px;
+}
+
+.projects p {
+	position: absolute;
+	font-size: 15px;
+	font-weight: 400;
+	color: #fff;
+	padding: 10px;
+    align-self: baseline;
+    background: #000000bd;
+}
+
+.projects h3 {
+	font-size: 25px;
+	border-bottom: 4px solid #e5cfd2;
+}
+
+.grid-sizer,
+.grid-item {
+	width: 100%;
+}
+
+/*
+|------------------------------------------
+|  Contact
+|------------------------------------------
+*/
+
+.contact .container {
+	margin-bottom: 50px;
+}
+
+.contact .lrg-heading {
+	margin-bottom: 10px;
+}
+
+.contact p {
+	max-width: 322px;
+	margin-left: 20px;
+	position: relative;
+}
+
+.contact p:before {
+	content: "";
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    top: 0px;
+    left: -22px;
+    background: #212121;
+}
+
+.contact .social-media {
+	display: flex;
+	justify-content: space-around;
+}
+
+.contact img {
+	width: 10vw;
+	max-width: 100px;
+	min-width: 55px;
+	margin-top: 40px;
+}
+
+/*
+|------------------------------------------
+|  Footer
+|------------------------------------------
+*/
+
+.ftr {
+	margin: 50px 0 25px;
+	padding-left: 20px;
+}
+
+.ftr p {
+	font-size: 65%;
+}
+
+/*
+|------------------------------------------
+|------------------------------------------
+|  Queries 320, 768, 992, and 1200
+|------------------------------------------
+|------------------------------------------
+*/
+@media (min-width: 418px) {
+
+	.me-info span {
+		font-size: 25px;
+	}
+
+	.resume p {
+		font-size: 20px;
+		margin: 10px 10px 10px 0;
+		display: inline-block;
+		background-color: #e5cfd2;
+		padding: 5px 25px;
+    	border-radius: 5px;
+	}
+
+	.resume .specs {
+		margin: 50px 0;
+	}
+
+	.resume .skills {
+		margin-right: 20px;
+	}
+
+}	
+
+
+@media (min-width: 635px) {
+
+	.header {
+		padding-right: 35px;
+		padding-left: 35px;
+	}
+
+	.header img {
+		width: 182px;
+    	margin-top: 41px;
+	}
+
+	.m-padding {
+		padding-right: 35px;
+		padding-left: 35px;
+	}
+
+	.bnr {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.bnr .column {
+		margin-bottom: 25px;
+	}
+
+	.bnr .job-title {
+		font-size: 18px;
+		padding-bottom: 0px;
+	}
+
+	.projects .pic {
+		position: relative;
+	}
+
+	.projects .box {
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0);
+		height: 100%;
+		width: 100%;
+		z-index: 2;
+		transition: background-color 300ms ease;
+	}
+
+	.projects .box:hover {
+		background-color: rgba(253,255,255,0.2);
+	}
+
+	.projects p {
+		font-size: 20px;
+		padding: 20px;
+	}
+
+	.contact .container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	.lrg-heading {
+		font-size: 39px;
+    	align-self: center;
+    	margin-right: 25px;
+	}
+
+	.contact .lrg-heading {
+		text-align: center;
+	}
+
+	.contact p {
+		max-width: 211px;
+	}
+
+	body {
+		font-size: 20px;
+	}
+
+	.me-info .sml-desc {
+		display: none;
+	}
+
+	.me-info .lrg-desc {
+		display: block;
+		font-size: 18px;
+		max-width: 520px;
+	}
+
+	.ftr {
+		margin-top: 100px;
+	}
+
+} 
+
+@media (min-width: 768px) {
+
+	.header {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	.m-padding {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+
+	.gn-trigger {
+		display: none;
+	}
+
+	.gn {
+		display: block !important;
+		position: static;
+	}
+
+	.gn-items {
+		display: flex;
+		justify-content: flex-end
+	}
+
+	.gn li {
+		border-bottom: none;
+	}
+
+	.gn li:last-child {
+		box-shadow: none;
+	}
+
+	.gn a {
+		padding: 15px;
+	}
+
+	.bnr .column {
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	.lrg-heading {
+		font-size: 50px;
+	}
+
+	.bnr .column .job-title {
+		font-size: 23px;
+	}
+
+	.bottom-row {
+		display: flex; 
+		align-items: center;
+		justify-content: center;
+	}
+
+	.bnr .intro {
+		margin-left: 45px;
+	}
+
+	body {
+		font-size: 23px;
+	} 
+
+	.contact .container {
+		margin-bottom: 50px;
+	}
+
+	.contact p {
+		max-width: 266px;
+	}
+
+}
+
+@media (min-width: 992px) {
+
+	.header .grid-item {
+		margin: 0 70px;
+	}
+
+	.bnr .column {
+		margin: 25px 0 40px;
+	}
+
+	.bnr .bottom-row {
+		justify-content: center;
+	}
+
+	body {
+		font-size: 28px;
+	}
+
+	.grid-sizer,
+	.grid-item {
+		width: 50%;
+	}
+
+	.me-info .me-photo {
+		display: block;
+		width: 350px;
+		margin-right: 25px;
+	}
+
+	.me-info .about-intro {
+		align-items: center;
+	}
+
+	.hobbies {
+		display: block;
+	}
+
+	.contact p {
+		max-width: 291px;
+	}
+
+	.contact .social-media {
+		justify-content: space-evenly;
+	}
+
+}
+
+@media (min-width: 1200px) {
+
+	.header {
+		padding-right: 80px;
+		padding-left: 80px;
+	}
+
+	.lrg-padding {
+		padding-right: 80px;
+		padding-left: 80px;
+	}
+
+	.bnr .intro {
+		margin-left: 100px;
+	}
+
+	.center-1200 {
+		justify-content: center;
+	}
+
+	.hobbies .spec-heading {
+		display: flex;
+		justify-content: center;
+	}
+
+}
+
+@media (min-width: 1500px) {
+	
+	.grid-sizer,
+	.grid-item {
+		width: 33.3333%;
+	}
+
+}
+
+
